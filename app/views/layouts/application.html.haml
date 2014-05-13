@@ -1,0 +1,21 @@
+!!!
+= render "/refinery/html_tag"
+- site_bar = render('/refinery/site_bar', :head => true)
+
+%head
+  = render "/refinery/head"
+
+%body{id: canonical_id(@page)}
+  = site_bar
+
+  #page_container
+    %header#header
+      = render "/refinery/header"
+
+    %section#page
+      = yield
+
+    %footer
+      = render "/refinery/footer"
+
+    = render "/refinery/javascripts"

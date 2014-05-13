@@ -1,0 +1,7 @@
+.navbar{role: "navigation"}
+  .container
+    .navbar-header
+      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
+        %span.glyphicon.glyphicon-align-justify
+      = link_to "Lighthouse Studies", refinery.root_path, class: 'navbar-brand'
+    = header_menu.to_html
