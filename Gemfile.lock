@@ -1,3 +1,9 @@
+PATH
+  remote: vendor/extensions
+  specs:
+    refinerycms-courses (1.0)
+      refinerycms-core (~> 2.1.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -213,6 +219,7 @@ DEPENDENCIES
   rails (= 3.2.17)
   refinerycms (~> 2.1.0)
   refinerycms-acts-as-indexed (~> 1.0.0)
+  refinerycms-courses!
   refinerycms-inquiries (~> 2.1.0)
   refinerycms-page-images (~> 2.1.0)
   sass-rails (~> 3.2.3)

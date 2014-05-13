@@ -72,24 +72,11 @@
         .panel.panel-default
           %h3 Upcoming Courses
           %ul.list-group
-            %li.list-group-item
-              Nov 14th -
-              %a{href: "#"} Course Title
-            %li.list-group-item
-              Nov 14th -
-              %a{href: "#"} Another Course Title
-            %li.list-group-item
-              Nov 14th -
-              %a{href: "#"} Course Title
-            %li.list-group-item
-              Nov 14th -
-              %a{href: "#"} Another Course Title
-            %li.list-group-item
-              Nov 14th -
-              %a{href: "#"} Course Title
-            %li.list-group-item
-              Nov 14th -
-              %a{href: "#"} Another Course Title
+            - Refinery::Courses::Course.all.each_with_index do |course, index|
+              %li{class: 'list-group-item'}
+                = course.date.strftime("%B %e")
+                -
+                = link_to course.title, refinery.courses_course_path(course)
       .col-md-8.col-sm-6
         .panel.panel-default
           %h3 About the Instructor

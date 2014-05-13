@@ -1,0 +1,18 @@
+#intro{"data-speed" => "5", "data-type" => "background"}
+  %section.grid
+    .container
+      .row
+        .col-md-12
+          %h1 -#{@page.title}-
+
+
+.container
+  .row
+    %section#main.col-md-8
+      %h2 Hey
+      =raw @page.content_for(:body)
+
+    %section#sidebar.col-md-4
+      .well
+        %h3 Hey
+        =raw @page.content_for(:side_body)
